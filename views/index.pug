@@ -1,0 +1,36 @@
+html
+    head
+        meta(charset="utf-8")
+        title Dashboard
+        style
+            include ../static/dashboard.css
+    body
+    .head div
+        h1 DASHBOARD
+    br
+    br
+    br
+    table(border=3)
+        tr
+            th Name
+            th Species
+            th Breed
+            th Age
+            th Weight
+            th Actions
+        each dashboard in dashboards
+            tr
+                td=dashboard.name
+                td=dashboard.species
+                td=dashboard.breed
+                td=dashboard.age
+                td=`${dashboard.weight} lbs`
+                td
+                    a(href="/animals/"+dashboard._id) View
+                    a(href="/animals/edit/"+dashboard._id) Edit
+                    br 
+                    br
+                    a(href="/animals/destroy/"+dashboard._id) Remove
+                    
+    a(href="/new")
+        button(type="button") New

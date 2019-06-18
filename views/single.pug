@@ -1,0 +1,18 @@
+hmtl
+    head
+        meta(charset="utf-8")
+        title Single Animal
+        style
+            include ../static/dashboard.css
+    body
+        .container
+            h1  #{dashboard.name}
+            
+            br
+            h2 Species: #{dashboard.species}
+            h2 Breed: #{dashboard.breed}
+            h2 Age: #{dashboard.age}
+            h2 Weight: #{dashboard.weight}
+            br
+            a(href='/') 
+                button(type="button") Home

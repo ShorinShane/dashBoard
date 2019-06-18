@@ -1,0 +1,31 @@
+hmtl
+    head
+        meta(charset="utf-8")
+        title Edit
+        style
+            include ../static/dashboard.css
+    body
+        .container
+            h1 Edit #{dashboard.name}
+            
+            br
+            form(action="/update/"+dashboard._id method="post")
+                .form-group
+                    label Name:
+                    input(type="text" name="name" value= dashboard.name)
+                .form-group
+                    label Species:
+                    input(type="text" name="species" value= dashboard.species)
+                .form-group
+                    label Breed:
+                    input(type="text" name="breed" value= dashboard.breed)
+                .form-group
+                    label Age:
+                    input(type="number" name="age" value= dashboard.age)
+                .form-group
+                    label Weight:
+                    input(type="number" name="weight" value= dashboard.weight)
+                .form-group
+                    input(type="submit")
+                a(href='/') 
+                    button(type="button") Home
